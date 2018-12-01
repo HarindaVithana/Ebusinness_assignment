@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mentor</title>
+  <title>Kuppiya_post</title>
   <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
   <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
 
@@ -14,6 +14,7 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/imagehover.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="shortcut icon" type="image/png" href="img/5.jpg"/>
 </head>
 <body>
 <!--Navigation bar-->
@@ -25,7 +26,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button> -->
-            <a class="navbar-brand" href="index.html">Men<span>tor</span></a>
+            <a href="index.html"><img src="img/6.jpg" height="100px" width=180px/></a>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
@@ -51,28 +52,66 @@
                     <h2>Post Your Assignment</h2>
                 </div>
                 <form action="" method="post" role="form" class="contactForm">
-                    <table class="table" style="padding:20px">
+                    <div class="col-md-6 col-sm-6 col-xs-12 left">
+                    <table class="table">
+                      <div class="form-group">
                         <tr>
-                            <td>Subject</td>
-                            <td><input type="text" placeholder="Subject" name="subject"></td>
-                        </tr>
+                            <td><h4><b>Subject </b></h4></td>
+                            <td>
+                            <input type="text" name="subject" class="form-control form" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                            </td>
+                        </tr> 
+                      </div>
+                      <div class="form-group">
                         <tr>
-                            <td>Task</td>
-                            <td><input type="text" placeholder="Task" name="task"></td>
-                        </tr>
+                            <td><h4><b>Deadline </b></h4></td>
+                            <td>
+                            <input type="date" name="deadline" class="form-control form" id="deadline"/>
+                            <div class="validation"></div>
+                            </td>
+                        </tr> 
+                      </div>
+                      <div class="form-group">
                         <tr>
-                            <td>Deadline</td>
-                            <td><input type="date" name="Deadline" placeholder="dd/mm/yy"></td>
-                        </tr>
-                        <tr>
-                            <td>Description</td>
-                            <td><textarea name="description" placeholder="Description" class="form-control"></textarea></td>
-                        </tr>
-                    </table>
-                </form>
+                            <td><h4><b>Payment </b></h4></td>
+                            <td>
+                            <input type="text" name="payment" class="form-control form" id="payment" placeholder="Rs" data-rule="minlen:4"/>
+                            <div class="validation"></div>
+                            </td>
+                        </tr> 
+                        </div>
+                        <div class="form-group">
+                          <tr>
+                            <td><h4><b>Task </b></h4></td>
+                            <td>
+                            <input type="text" name="task" class="form-control form" id="task" placeholder="Task" data-rule="minlen:4"/>
+                            <div class="validation"></div>
+                            </td>
+                          </tr> 
+                        </div>
+                        <div class="form-group">
+                          <tr>
+                            <td><h4><b>Description </b></h4></td>
+                            <td>
+                                <textarea class="form-control" id="description" name="description" rows="5" data-rule="required" placeholder="Description"></textarea>
+                            <div class="validation"></div>
+                            </td>
+                          </tr> 
+                        </div>
+                    </table>            
+                    </div>
+                    <div class="col-xs-12">
+                      <!-- Button -->
+                      <button type="submit" id="submit" name="submit" class="form contact-form-button light-form-button oswald light" onclick="post_fun()">
+                        POST
+                      </button>
+                    </div>
+                  </form>
             </div>
         </div>
     </section>
+    </div>
 </div>
 <!-- /Content -->
 
@@ -86,7 +125,7 @@
             <li><a href="#link"><i class="fa fa-dribbble fa-fw"></i></a></li>
             <li><a href="#link"><i class="fa fa-linkedin fa-fw"></i></a></li>
         </ul>
-        ©2016 www.mentor.org 
+        ©2016 www.kuppiya.org 
         <br>All rights reserved
     </div>
 </footer>
@@ -97,5 +136,15 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
     <script src="contactform/contactform.js"></script>
+    <script>
+        function post_fun(){
+            alert('Your assignment has been posted');
+            document.getElementById('subject').value = '';
+            document.getElementById('name').value = '';
+            document.getElementById('payment').value = '';
+            document.getElementById('task').value = '';
+            document.getElementById('description').value = '';
+        }
+    </script>
 </body>
 </html>

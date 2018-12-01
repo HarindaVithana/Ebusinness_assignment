@@ -128,7 +128,7 @@ Banner
     color: #fff;
 }
 .text-border{
-	border: 5px solid #5FCF80;
+	border: 5px solid rgb(251, 255, 1);
 	display: inline-block;
 	margin-top: 150px;
 }
